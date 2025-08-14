@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="sidebar-header">
+    <img src="logo.png" alt="Logo" class="logo">
+    <button class="toggle-btn" id="toggleSidebar">
+      <img src="side.png" alt="">
+    </button>
+  </div>
+
+  <ul class="sidebar-menu">
+    <div class="first-menu">
+      <li class="active">
+        <i class="fa-solid fa-house"></i>
+        <span>Dashboard</span>
+      </li>
+    </div>
+    <div class="second-menu">
+      <li>
+        <i class="fa-solid fa-plus"></i>
+        <span>Add Item</span>
+      </li>
+    </div>
+  </ul>
+</div>
+
+<!-- Main Content -->
+
+
+<div class="main-content">
+  
+  <!-- Top Navbar -->
+  <nav class="top-nav">
+    <div class="search-box">
+      <i class="fa-solid fa-search" id="toggleSearchDropdown"></i>
+      <input type="text" placeholder="Search or type a command" id="taskSearchInput">
+
+      <!-- DropDown Div -->
+       <div id="searchDropdown" class="search-dropdown" style="display:none;"></div>
+    </div>
+
+    <div class="nav-icons">
+      <i class="fa-solid fa-gear"></i>
+      <i class="fa-solid fa-bell"></i>
+      <img src="User.png" alt="User" class="user-dp">
+    </div>
+  </nav>
+
+  <!-- Dashboard Section -->
+  <section id="dashboardSection">
+    <div class="todo">
+
+      <div class="todo-column" data-state="todo">
+        <div class="upper-text">
+          <h3>To Do</h3>
+          <span><img src="Icon (1).png" alt=""></span>
+        </div>
+        <div class="tasks"></div>
+        <div class="lower-text">
+          <div class="add-item">+ Add New Task</div>
+          <span><img src="Icon.png" alt=""></span>
+        </div>  
+      </div>
+
+      <div class="todo-column" data-state="doing">
+        <div class="upper-text">
+          <h3>Doing</h3>
+          <span><img src="Icon (1).png" alt=""></span>
+        </div>
+        <div class="tasks"></div>
+        <div class="lower-text">
+          <div class="add-item">+ Add New Task</div>
+          <span><img src="Icon.png" alt=""></span>
+        </div>
+      </div>
+
+      <div class="todo-column" data-state="done">
+        <div class="upper-text">
+          <h3>Done</h3>
+          <span><img src="Icon (1).png" alt=""></span>
+        </div>
+        <div class="tasks"></div>
+        <div class="lower-text">
+          <div class="add-item">+ Add New Task</div>
+          <span><img src="Icon.png" alt=""></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Add Item Section -->
+  <section id="addItemSection" style="display:none;">
+    <form id="addItemForm">
+      <label for="itemName">Items</label>
+      <input type="text" id="itemName" required>
+      
+      <label for="itemImage">Image</label>
+      <input type="text" id="itemImage">
+      
+      <button type="submit">Add</button>
+    </form>
+  </section>
+
+
+  <!-- Settings Section -->
+<section id="settingsSection" style="display:none;">
+  <form id="settingsForm">
+    <label for="settingsName">First Name</label>
+    <input type="text" id="settingsName" required>
+
+    <label for="settingsSurname">Last Name</label>
+    <input type="text" id="settingsSurname" required>
+
+    <label for="settingsPhone">Phone</label>
+    <input type="text" id="settingsPhone">
+
+    <label for="settingsEmail">Email</label>
+    <input type="email" id="settingsEmail" required>
+
+    <label for="settingsPassword">Password</label>
+    <input type="password" id="settingsPassword" required>
+
+    <button type="submit">Save Changes</button>
+  </form>
+</section>
+
+
+</div> <!-- End main-content -->
+
+<script src="dashboard.js"></script>
+
+
+    
+</body>
+</html>

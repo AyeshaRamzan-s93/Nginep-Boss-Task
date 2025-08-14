@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Authorization</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div class="sign-up-container">
+
+    <!-- Sign Up -->
+    <div class="sign-up" id="signUpSection">
+      <h1>Sign Up</h1>
+      <button class="google-btn">Sign Up with <span>Google</span></button>
+
+      <div class="divider">
+        <hr />
+        <span>Already have an account? <a href="#" id="showLogin" class="Login">Log in</a></span>
+        <hr />
+      </div>
+
+      <form class="sign-up-form" id="signupForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="Name">Name</label>
+            <input type="text" id="Name" placeholder="Name" />
+          </div>
+          <div class="form-group">
+            <label for="Surname">Surname</label>
+            <input type="text" id="Surname" placeholder="Surname" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="Phone">Phone Number</label>
+          <input type="text" id="Phone" placeholder="Phone Number" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Email Address" />
+        </div>
+
+        <div class="form-group password-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Password" />
+          <span class="eye-icon"><i class="fa-solid fa-eye-slash"></i></i></span>
+        </div>
+
+        <div class="terms">
+          <input type="checkbox" id="terms" />
+          <label for="terms">
+            By Signing Up I agree with <a href="#">Terms and Conditions</a>
+          </label>
+        </div>
+
+        <button type="submit" class="submit-btn" id="signupBtn" disabled>Sign Up</button>
+      </form>
+    </div>
+
+    <!-- Login -->
+    <div class="sign-up" id="loginSection" style="display:none;">
+      <h1>Sign In</h1>
+      <button class="google-btn">Sign In with <span>Google</span></button>
+
+      <div class="divider">
+        <hr />
+        <span>Don’t have an account? <a href="#" id="showSignup" class="Login">Sign Up</a></span>
+        <hr />
+      </div>
+
+      <form class="sign-up-form" id="loginForm">
+        <div class="form-group">
+          <label for="loginEmail">Email Address</label>
+          <input type="email" id="loginEmail" placeholder="Email Address" />
+        </div>
+
+        <div class="form-group password-group">
+          <label for="loginPassword">Password 
+            <a href="#" style="float:right; font-weight:400; color: #1097EB">Forgot Password?</a>
+          </label>
+          <input type="password" id="loginPassword" placeholder="Password" />
+          <span class="eye-icon"><i class="fa-solid fa-eye-slash"></i></span>
+        </div>
+
+        <button type="submit" class="submit-btn">Log In</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="left">
+      <p>© 2022 yourapp.com</p>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="right">
+      <a href="#">Terms and Conditions</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+

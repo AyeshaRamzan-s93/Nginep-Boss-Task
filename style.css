@@ -1,0 +1,266 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main container */
+.sign-up-container {
+    flex: 1; /* pushes footer down */
+    display: flex;
+    justify-content: center;
+    max-width: 1440px;
+    width: 100%;
+    padding-top: 84px; 
+    padding-bottom: 169px; /* was margin-bottom */
+}
+
+.sign-up {
+    width: 754px;
+    text-align: center;
+}
+
+label {
+    font-weight: 600;
+    font-size: 15px;
+    text-align: left;
+    padding-bottom: 8px;
+    line-height: 100%;
+}
+/* #loginSection {
+  height: 960px;
+} */
+
+
+.form-group input::placeholder {
+    font-weight: 400;
+    font-size: 15px;
+    font-style: normal;
+    line-height: 100%;
+    color: #000000; 
+    opacity: 35%;
+}
+
+/* Title */
+.sign-up h1 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 100%;
+    margin-bottom: 64px;
+}
+
+/* Google button */
+.google-btn {
+    width: 100%;
+    border-radius: 8px;
+    height: 48px;
+    border: 1px solid #00000033;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.google-btn span {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.divider hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.divider span {
+    white-space: nowrap;
+}
+
+.divider .Login {
+    color: #1097EB;
+}
+
+/* Form */
+.sign-up-form {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Name + Surname row */
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form-group input {
+    height: 48px;
+    padding: 0 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Password eye icon */
+.password-group {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 12px;
+    top: 65%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Terms */
+.terms {
+    font-size: 15px;
+    margin-top: 23px;
+    margin-bottom: 27px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.terms a {
+    color: #1097EB;
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+/* Submit button */
+.submit-btn {
+    width: 100%;
+    height: 48px;
+    background: #0EAF52;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.submit-btn:disabled {
+    background-color: #a5d6a7; /* faded green */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* .submit-btn:disabled {
+    background-color: #3ef36b; 
+    cursor: not-allowed;
+    opacity: 0.7;
+} */
+
+/* Footer */
+footer {
+    width: 100%;
+    min-height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    box-sizing: border-box;
+}
+
+footer .left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+footer .right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+footer a {
+    color: #1097EB;
+    text-decoration: underline;
+}
+
+/* For screens ≤ 1024px */
+@media (max-width: 1024px) {
+    .sign-up-container {
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+
+    .sign-up {
+        width: 90%;
+    }
+
+    .google-btn,
+    .sign-up-form,
+    .form-group input,
+    .submit-btn {
+        width: 100%;
+    }
+
+    footer {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+/* For screens ≤ 720px */
+@media (max-width: 720px) {
+    .sign-up-container {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .sign-up h1 {
+        margin-bottom: 48px;
+    }
+
+    .divider {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    footer {
+        /* flex-direction: column; */
+        align-items: center;
+        gap: 20px;
+        padding: 24px;
+    }
+
+    footer .left,
+    footer .right {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}

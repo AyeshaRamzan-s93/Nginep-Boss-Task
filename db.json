@@ -1,0 +1,72 @@
+{
+  "users": [
+    {
+      "id": "ca91",
+      "name": "Ayesha",
+      "surname": "Ramzan",
+      "phone": "99000",
+      "email": "ayesha.ramzan@studio93.io",
+      "password": "12"
+    },
+    {
+      "id": "91e4",
+      "name": "Ansa",
+      "surname": "Ramzan",
+      "phone": "6600",
+      "email": "ansa.ramzan@gmail.com",
+      "password": "Ansa"
+    },
+    {
+      "id": "c68b",
+      "name": "Completed UI",
+      "image": "",
+      "state": "done"
+    },
+    {
+      "id": "5759",
+      "name": "Editing dashboard",
+      "image": "",
+      "state": "doing"
+    },
+    {
+      "id": "d016",
+      "name": "Zunaira",
+      "surname": "Batool",
+      "phone": "3300",
+      "email": "zuni123@gmail.com",
+      "password": "23"
+    },
+    {
+      "id": "2471",
+      "name": "Nimra",
+      "surname": "Ali",
+      "phone": "5500",
+      "email": "nimra123@gmail.com",
+      "password": "456"
+    },
+    {
+      "id": "c2f6",
+      "name": "John",
+      "surname": "Smith",
+      "phone": "6677",
+      "email": "john123@gmail.com",
+      "password": "john123"
+    },
+    {
+      "id": "096c",
+      "name": "John",
+      "surname": "Lucy",
+      "phone": "990099",
+      "email": "johnlucy123@gmail.com",
+      "password": "johnyy123"
+    },
+    {
+      "id": "d9e4",
+      "name": "Sabir",
+      "surname": "Ali",
+      "phone": "9900",
+      "email": "sabirali5569@gmail.com",
+      "password": "pucit123"
+    }
+  ]
+}

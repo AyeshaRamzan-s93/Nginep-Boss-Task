@@ -1,0 +1,544 @@
+
+ * {
+  margin: 0;
+  padding: 0;
+ }
+body {
+  margin: 0;
+  font-family: 'poppins';
+  box-sizing: border-box;
+  display: flex;
+}
+
+/* Sidebar  */
+
+.sidebar {
+  width: 300px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ccc;
+  margin: 0;
+  padding-top: 40px; 
+}
+
+/* Header inside sidebar — give it its own padding */
+.sidebar-header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  /* padding: 0 18px;  */
+}
+
+.sidebar-header .logo {
+  height: 40px;
+  width: auto;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+/* Sidebar menu  */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 32px;
+  width: 100%;
+}
+
+.sidebar-menu li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 20px; 
+  position: relative;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* Icon circle for the "+" */
+.second-menu li i {
+  background: #dbe8ff;
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 12px;
+  border: 1px solid black;
+}
+
+.first-menu,
+.second-menu {
+  background: #f0f6ff;
+}
+
+.second-menu {
+  margin-top: 32px;
+}
+
+/* Active/inactive bars */
+.sidebar-menu li::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: black; 
+  border-radius: 2px 0 0 2px;
+}
+
+.sidebar-menu li.active {
+  color: #1e5eff;
+  font-weight: 600;
+  background: #e8f0ff;
+}
+
+.sidebar-menu li.active i {
+  color: #1e5eff;
+  border-color: #1e5eff;
+}
+
+.sidebar-menu li.active::after {
+  background: #1e5eff; /* Blue for active */
+}
+
+
+/* =====================Main Content ============= */
+
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Navbar */
+.top-nav {
+  background: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #F7F7F7;
+  padding: 5px 10px;
+  border-radius: 20px;
+  width: 414px;
+  color: #A2A5B1;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 5px;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-icons i {
+  font-size: 20px;
+  cursor: pointer;
+  color: #A2A5B1;
+}
+
+.user-dp {
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  
+}
+
+
+
+.search-dropdown {
+  position: absolute;
+  top: 40px; /* Just below search box */
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.search-dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.search-dropdown-item:hover {
+  background: #f0f6ff;
+}
+
+.search-dropdown-item .actions {
+  display: flex;
+  gap: 8px;
+}
+
+.search-dropdown-item i {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+/* Todo */
+
+
+.todo {
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+}
+.upper-text, .lower-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 8px 0; 
+}
+
+.upper-text h3 {
+  font-size: 30px;   /* Scales well without breaking layout */
+  font-weight: 600;
+  margin: 0;         /* Remove default h3 spacing */
+
+}
+
+.upper-text span img,
+.lower-text span img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Add New Task styling */
+.add-item {
+  cursor: pointer;
+  color: #93989A;
+  font-size: 14px;
+  font-weight: 500;
+  /* padding: 6px 10px; */
+}
+
+
+/* Column adjustments */
+.todo-column {
+  background: #DEDEDE;
+  border-radius: 30px;
+  width: 250px;
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push lower-text to bottom */
+}
+
+
+/* Add Item section styling */
+
+
+#addItemSection {
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 550px; 
+  text-align: left;
+  /* margin: auto; */
+}
+
+#addItemForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#addItemForm label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#addItemForm input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+}
+
+#addItemForm input:focus {
+  border-color: #4765ff;
+  background: #fff;
+}
+
+#addItemForm button {
+  background: #4765ff;
+  color: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  width: 320px;
+  margin: 18px auto 0;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+#addItemForm button:hover {
+  background: #3650d1;
+  transform: scale(1.02);
+}
+
+
+/* Task Styling */
+
+
+.task-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px; /* reduced padding for tighter look */
+  display: flex;
+  flex-direction: column;
+  gap: 8px; 
+  margin-top: 15px;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 120px;
+  background: #DEDEDE;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-placeholder img {
+  display: none;
+}
+
+/* .image-gray {
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0; 
+} */
+
+.task-move {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.task-move label {
+  font-size: 13px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+  margin-top: 4px; /* smaller space above actions */
+}
+
+.task-actions .delete-btn {
+  color: red; /* red trash icon */
+}
+
+.task-actions .edit-btn {
+  color: #666;
+}
+
+.task-actions i:hover {
+  color: orange;
+}
+
+/* Keep columns independent height */
+.todo {
+  align-items: flex-start; /* no column height sync */
+}
+
+
+
+
+/* Settings Section */
+#settingsSection {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 20px auto;
+  display: none;
+}
+
+#settingsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#settingsForm input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+#settingsForm button {
+  padding: 10px;
+  background: #4765ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.settings-dropdown {
+  border-radius: 4px;
+}
+.settings-dropdown-item:hover {
+  background: #f0f0f0;
+}
+
+
+/* Responsiveness */
+
+
+@media (max-width: 1024px) {
+  body {
+    flex-direction: row; 
+  }
+
+  .sidebar {
+    flex-shrink: 0; 
+  }
+
+  .main-content {
+    flex: 1;
+    min-height: 100vh;
+  }
+
+  .todo {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .todo-column {
+    flex: 1 1 calc(50% - 20px); 
+  }
+}
+
+/* Mobile view */
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column; 
+  }
+
+  /* Sidebar hidden off-screen by default */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%; 
+    width: 220px;
+    height: 100%;
+    background: white;
+    transition: left 0.3s ease;
+    z-index: 200; 
+  }
+
+  /* Sidebar visible when .active is added via JS */
+  .sidebar.active {
+    left: 0;
+  }
+
+  /* Hamburger button */
+
+  .toggle-btn {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px; 
+    background: #fff;
+    border-radius: 4px;
+    padding: 8px 10px;
+    cursor: pointer;
+    z-index: 300; 
+  }
+
+
+  .main-content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .top-nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .search-box {
+    width: 100%;
+    order: 2; 
+  }
+
+  .nav-icons {
+    order: 1;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+ 
+  .todo {
+    flex-direction: column;
+  }
+
+  .todo-column {
+    width: 100%;
+  }
+
+  /* Make forms take full width */
+  #addItemSection,
+  #settingsSection {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  /* Buttons stretch across */
+  #addItemForm button,
+  #settingsForm button {
+    width: 100%;
+  }
+}
